@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assetmerkle Society | IGDTUW</title>
+    <!-- Use a modern font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background */
+        }
+        /* Custom CSS for a cool gradient text effect on the main heading */
+        .gradient-text {
+            background: linear-gradient(90deg, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        /* Custom CSS for hover effects to make it feel responsive */
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: #1a202c; /* Lighter background on hover */
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .nav-hover:hover {
+            color: #ec4899; /* Pink color on hover for navigation links */
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Header and Navigation -->
+    <header class="py-6 px-4 md:px-8 lg:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50 bg-opacity-70 backdrop-filter backdrop-blur-lg bg-gray-800">
+        <div class="flex items-center space-x-2">
+            <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+            <h1 class="text-xl md:text-2xl font-bold text-gray-100">Assetmerkle Society</h1>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="#about" class="text-gray-300 hover:text-purple-400 nav-hover transition duration-300">About</a>
+            <a href="#domains" class="text-gray-300 hover:text-purple-400 nav-hover transition duration-300">Domains</a>
+            <a href="#team" class="text-gray-300 hover:text-purple-400 nav-hover transition duration-300">Team</a>
+            <a href="#contact" class="text-gray-300 hover:text-purple-400 nav-hover transition duration-300">Contact</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-8 text-xl">
+        <a href="#about" class="text-gray-300 hover:text-purple-400 nav-hover transition duration-300" onclick="hideMobileMenu()">About</a>
+        <a href="#domains" class="text-gray-300 hover:text-purple-400 nav-hover transition duration-300" onclick="hideMobileMenu()">Domains</a>
+        <a href="#team" class="text-gray-300 hover:text-purple-400 nav-hover transition duration-300" onclick="hideMobileMenu()">Team</a>
+        <a href="#contact" class="text-gray-300 hover:text-purple-400 nav-hover transition duration-300" onclick="hideMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <main class="min-h-screen flex items-center justify-center p-4 md:p-8 pt-24 md:pt-32">
+        <div class="text-center max-w-4xl space-y-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                Welcome to the <span class="gradient-text">Assetmerkle Society</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+                Igniting innovation and fostering a culture of technical excellence at
+                <span class="font-semibold text-purple-300">Indira Gandhi Delhi Technical University for Women (IGDTUW)</span>.
+            </p>
+            <div class="pt-6">
+                <a href="#contact" class="inline-block py-3 px-8 rounded-full font-bold bg-purple-600 hover:bg-purple-700 text-white transition duration-300 btn-hover">
+                    Join Our Community
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 md:px-8 lg:px-12 bg-gray-900">
+        <div class="max-w-6xl mx-auto text-center space-y-8">
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-100">About Our Society</h3>
+            <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                The Assetmerkle Society is the premier technical club of IGDTUW, dedicated to promoting a passion for technology and its applications. We provide a platform for students to learn, build, and innovate through workshops, hackathons, and projects. Our goal is to empower the next generation of women in technology and create a collaborative environment where ideas come to life.
+            </p>
+        </div>
+    </section>
+
+    <!-- Domains Section -->
+    <section id="domains" class="py-16 px-4 md:px-8 lg:px-12">
+        <div class="max-w-6xl mx-auto text-center space-y-8">
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-100">What We Do</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Web Development -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto bg-purple-600 rounded-full mb-4">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.89 17.55l-2.6-2.6m-1.4 1.4L4 12l2.8-2.8m-1.4 1.4l1.4-1.4m1.4 1.4l-1.4 1.4m1.4 1.4l1.4-1.4m-1.4 1.4l-1.4-1.4m1.4 1.4l1.4 1.4m1.4 1.4l-1.4-1.4m1.4 1.4l-1.4 1.4m1.4 1.4l1.4-1.4m-1.4 1.4l-1.4 1.4m-1.4-1.4L4 12l2.8-2.8m-1.4 1.4l1.4-1.4m1.4 1.4l-1.4 1.4m1.4 1.4l-1.4 1.4m1.4-1.4L4 12l2.8-2.8m-1.4 1.4l1.4-1.4m1.4 1.4l-1.4 1.4m1.4 1.4l1.4-1.4m1.4 1.4l-1.4 1.4m1.4-1.4L4 12l2.8-2.8m-1.4 1.4l1.4-1.4m1.4 1.4l-1.4 1.4m1.4 1.4l1.4-1.4m-1.4 1.4l-1.4 1.4m1.4-1.4L4 12l2.8-2.8m-1.4 1.4l1.4-1.4m1.4 1.4l-1.4 1.4m1.4 1.4l1.4-1.4m-1.4 1.4l-1.4 1.4m1.4 1.4l1.4 1.4m-1.4-1.4L4 12l2.8-2.8m-1.4 1.4l1.4-1.4m1.4 1.4l-1.4 1.4m1.4 1.4l1.4-1.4m-1.4 1.4l-1.4 1.4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-gray-200">Web & App Development</h4>
+                    <p class="text-gray-400">Building intuitive and powerful digital experiences for a connected world.</p>
+                </div>
+
+                <!-- Card 2: AI/ML -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto bg-pink-600 rounded-full mb-4">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-gray-200">AI & Machine Learning</h4>
+                    <p class="text-gray-400">Exploring the future of intelligence and creating smart, data-driven solutions.</p>
+                </div>
+
+                <!-- Card 3: UI/UX & Design -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto bg-blue-600 rounded-full mb-4">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.674a2 2 0 001.996-1.88l.894-6.257a4 4 0 00-3.992-4.116H9.199a4 4 0 00-4 4.116l.894 6.257a2 2 0 002 1.88zM12 4.5l-2.43 2.43M12 4.5l2.43 2.43"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-gray-200">UI/UX & Design</h4>
+                    <p class="text-gray-400">Crafting beautiful and intuitive interfaces that enhance the user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 px-4 md:px-8 lg:px-12 bg-gray-900">
+        <div class="max-w-6xl mx-auto text-center space-y-8">
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-100">Meet Our Leaders</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://placehold.co/128x128/9CA3AF/ffffff?text=P" alt="Placeholder profile picture">
+                    <h4 class="text-xl font-semibold text-gray-200">Priya Sharma</h4>
+                    <p class="text-sm text-purple-400">President</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://placehold.co/128x128/9CA3AF/ffffff?text=A" alt="Placeholder profile picture">
+                    <h4 class="text-xl font-semibold text-gray-200">Ananya Singh</h4>
+                    <p class="text-sm text-purple-400">Vice President</p>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://placehold.co/128x128/9CA3AF/ffffff?text=S" alt="Placeholder profile picture">
+                    <h4 class="text-xl font-semibold text-gray-200">Simran Kaur</h4>
+                    <p class="text-sm text-purple-400">Tech Lead</p>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://placehold.co/128x128/9CA3AF/ffffff?text=R" alt="Placeholder profile picture">
+                    <h4 class="text-xl font-semibold text-gray-200">Ritika Goel</h4>
+                    <p class="text-sm text-purple-400">Design Lead</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 md:px-8 lg:px-12">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-100">Get in Touch</h3>
+            <p class="text-gray-400 leading-relaxed">
+                Interested in joining us or collaborating? Follow our social media pages to stay updated on our latest events and opportunities.
+            </p>
+            <div class="flex flex-wrap justify-center space-x-4">
+                <a href="#" class="inline-block py-3 px-6 rounded-full font-bold bg-pink-600 hover:bg-pink-700 text-white transition duration-300 btn-hover">
+                    Instagram
+                </a>
+                <a href="#" class="inline-block py-3 px-6 rounded-full font-bold bg-blue-600 hover:bg-blue-700 text-white transition duration-300 btn-hover">
+                    LinkedIn
+                </a>
+                <a href="#" class="inline-block py-3 px-6 rounded-full font-bold bg-gray-700 hover:bg-gray-800 text-white transition duration-300 btn-hover">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 md:px-8 lg:px-12 text-center text-gray-400 bg-gray-800">
+        <p>&copy; 2024 Assetmerkle Society, IGDTUW. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function hideMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Close menu on resize for desktop view
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                hideMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
